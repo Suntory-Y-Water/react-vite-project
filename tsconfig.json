@@ -21,6 +21,11 @@
     "noFallthroughCasesInSwitch": true,
     // test, expectなどをグローバルで使えるようにする設定
     "types": ["vitest/globals"],
+    // ベースディレクトリを指定、import時のパスを短くする
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src", "vitest-setup.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
