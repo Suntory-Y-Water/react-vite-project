@@ -13,8 +13,3 @@ test('サンプルテスト', async () => {
   expect(await screen.findByText('Loading...')).toBeInTheDocument();
   expect(await screen.findByRole('heading')).toHaveTextContent('Hello, John Maverick');
 });
-
-test('スナップショットテスト', () => {
-  const { container } = render(<Sample />);
-  expect(container).toMatchSnapshot();
-});

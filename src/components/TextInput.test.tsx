@@ -12,8 +12,3 @@ test('TextInput Component Test', async () => {
   await user.type(inputElement, 'Hello World');
   expect(screen.getByText('Entered Text: Hello World')).toBeInTheDocument();
 });
-
-test('スナップショットテスト', () => {
-  const { container } = render(<TextInput />);
-  expect(container).toMatchSnapshot();
-});

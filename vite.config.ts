@@ -10,10 +10,10 @@ export default defineConfig({
     globals: true,
     environment: 'happy-dom',
     setupFiles: ['./vitest-setup.ts'],
-    // スナップショットの保存先を設定
-    resolveSnapshotPath: (path, extension) => {
-      return path.replace('/src/', '/__snapshots__/') + extension;
-    },
+    // // スナップショットの保存先を設定。実装する必要があればコメントアウトを外す
+    // resolveSnapshotPath: (path, extension) => {
+    //   return path.replace('/src/', '/__snapshots__/') + extension;
+    // },
   },
   resolve: {
     alias: {
