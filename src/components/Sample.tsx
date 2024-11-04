@@ -5,17 +5,17 @@ type User = {
   lastName: string;
 };
 
-const Sample = () => {
+export default function Sample() {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleClick = async () => {
+  async function handleClick() {
     setIsLoading(true);
     const res = await fetch('https://api.example.com/user');
     const user = await res.json();
     setUser(user);
     setIsLoading(false);
-  };
+  }
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -26,9 +26,9 @@ const Sample = () => {
   return (
     <div>
       <h1>Hello, {username}</h1>
-      <button onClick={handleClick}>ユーザー名取得</button>
+      <button type='button' onClick={handleClick}>
+        ユーザー名取得
+      </button>
     </div>
   );
-};
-
-export default Sample;
+}

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const TextInput = () => {
+export default function TextInput() {
   const [text, setText] = useState('');
 
   return (
@@ -15,6 +15,4 @@ const TextInput = () => {
       <p>Entered Text: {text}</p>
     </div>
   );
-};
-
-export default TextInput;
+}
